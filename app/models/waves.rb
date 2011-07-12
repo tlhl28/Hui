@@ -31,12 +31,12 @@ class Waves
     })#.all( :flowing => from)
   end
 
-  def self.out(waves=10)
-    self.flowing(OUT)
+  def out(waves=10)
+    flowing(OUT,waves)
   end
 
-  def self.in(waves=10)
-    self.flowing(IN)
+  def in(waves=10)
+    flowing(IN,waves)
   end
 
 end

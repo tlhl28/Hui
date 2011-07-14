@@ -10,11 +10,18 @@ class User
   key :remember_key, String
   key :remember_key_expires_at, Time
 
+  key :reset_password_key, String
+  key :reset_password_key_expires_at, Time
+
+  key :blacklist, Array
   key :follwer, Array
   key :follow, Array
 
   #created_at and updated_at
   timestamps!
+
+  # Assocations :::::::::::::::::::::::::::::::::::::::::::::::::::::
+  many :waves
 
   # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
   RegEmailName   = '[\w\.%\+\-]+'
@@ -28,14 +35,14 @@ class User
   validates_length_of :password, :within => 6..8, :allow_blank => false
   validates_length_of :password, :with => RegEmailName, :allow_blank => false
 
-  # Assocations :::::::::::::::::::::::::::::::::::::::::::::::::::::
-  many :waves
+  # Action ::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-  def remember_me(cookies, request, time = 1.week)
+  def remember_me(time = 1.week)
 	self.remember_key_expires_at = time.from_now.utc
 	self.remember_key = UUIDTools::UUID.random_create.to_s
 	self.save(false)
-	cookies[:remember_key] = {:value => self.remember_key, :expires => self.remember_key_expires_at, :path => '/admin', :httponly => true, :domain => request.domain }
+	return {:value => self.remember_key, 
+	  :expires => self.remember_key_expires_at}
   end
 
   def forgot_password(request, time = 1.day)
@@ -45,7 +52,7 @@ class User
   end
 
   def self.login(name, password)
-	user = (User.find_by_name(name) or User.find_by_email(name))
+	user = User.find_by_name(name) || User.find_by_email(name)
 	if user
 	  user = nil if user.password != hash_password(password, user.salt)
 	end
@@ -62,12 +69,8 @@ class User
 
   def password=(pwd)
 	return if pwd.blank?
-	create_salt
-	self.password = User.hash_password(pwd, self.salt)
-  end
-
-  def create_salt
 	self.salt = UUIDTools::UUID.random_create.to_s
+	self.password = User.hash_password(pwd, self.salt)
   end
 
 end

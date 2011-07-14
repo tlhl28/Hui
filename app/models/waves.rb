@@ -6,6 +6,7 @@ class Waves
 
   belongs_to :user
 
+  key :user_id, ObjectId
   key :audio, ObjectId
   key :picture, ObjectId
   key :video, ObjectId
@@ -22,21 +23,33 @@ class Waves
 	self.is_exist
   end
 
-  def flowing(from,waves)
+  def flowing_to(to,waves)
 	#FIXME
 	paginate({
-	  :flowing => from,
+	  :flowing => to,
 	  :order => :created_at.asc, 
 	  :per_page => waves
 	})#.all( :flowing => from)
   end
 
   def out(waves=10)
-	flowing(OUT,waves)
+	flowing_to(OUT,waves)
   end
 
   def in(waves=10)
-	flowing(IN,waves)
+	flowing_to(IN,waves)
+  end
+
+  def flow_in(wave)
+	self.flowing = IN
+	push(wave)
+	save
+  end
+
+  def flow_out(wave)
+	self.flowing = OUT
+	push(wave)
+	save
   end
 
 end

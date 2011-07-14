@@ -1,6 +1,33 @@
 class HomeController < ApplicationController
-  def timeline
 
+  def timeline
+	@flowing = []
+	@flowing << @user.waves.in()
+	@flowing << @user.waves.out()
+	@flowing.sort()
+	render timeline
+  end
+
+  def profile
+	@flowing = []
+	@flowing << @user.waves.out()
+	render profile
+  end
+
+  def sign_up
+	new_user = User.new
+	if request.post?
+	  if simple_captcha_valid?
+		new_user = User.new(params[:new_user])
+		if new_user.save
+		  notice_stickie t(:message_1, :scope => [:txt, :controller, :blog])
+		  redirect_to login_path
+		end
+	  else
+		new_user = User.new(params[:new_user])
+		error_stickie t(:message_2, :scope => [:txt, :controller, :blog])
+	  end
+	end
   end
 
   def login
@@ -10,17 +37,11 @@ class HomeController < ApplicationController
 	  user = User.login(params[:name], params[:password])
 	  if user
 		jump = session[:jump]
-		clean_session_cookie
+		_clean_session_cookie
 		#user.set_session(session, request, @site)
-		session[:user_id] = user._id.to_s
-		session[:user_name] = user.name
-		session[:user_nick] = user.nick
-		session[:email] = user.email
-		if request.domain != site.domain and self.bind_domain
-		  session[:bind_domain] = self.bind_domain
-		end
-
-		#user.remember_me(cookies, request) if params[:persist]
+		_set_user_session(user)
+		#remember me
+		cookies[:remember_key] = user.remember_me() if params[:persist]
 		if jump
 		  redirect_to(jump)
 		else
@@ -30,10 +51,18 @@ class HomeController < ApplicationController
 	end  
   end
 
+  def logout
+	reset_session
+	_clean_session_cookie 
+	notice_stickie t(:message_0, :scope => [:txt, :controller, :application])
+	redirect_to login_path
+  end
+
   def forgot_password
 	return unless request.post?
 	user = User.find_by_email(params[:email])
 	if user
+	  #TODO
 	  user.forgot_password(request)
 	  notice_stickie t(:reset_password_email_send, :scope => [:txt, :controller, :blog])
 	else

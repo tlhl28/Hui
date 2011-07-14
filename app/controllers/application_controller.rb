@@ -1,45 +1,35 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :require_login
+  before_filter :_authorize
 
-  
   private
 
-  def logout_and_redirect_to
-	reset_session
-	clean_session_cookie 
-	notice_stickie t(:message_0, :scope => [:txt, :controller, :application])
-	redirect_to login_path
+  def _set_user_session(user)
+	session[:user_id] = user._id.to_s
+	session[:user_name] = user.name
+	session[:user_nick] = user.nick
+	#session[:email] = user.email
   end
 
-  def clean_session_cookie
-	cookies.delete :remember_key 
-	@user.update_attribute(:remember_key, "")
-  end
-
-  def require_login
-	unless logged_in?
-	  flash[:error] = "You must be logged in to access this section"
-	  redirect_to login_url # halts request cycle
+  def _authorize
+	if session[:user_id]
+	  @user = User.find(session[:user_id])
+	  return if @user
 	end
+	if cookies[:remember_key] 
+	  @user = User.find_by_remember_key(cookies[:remember_key])
+	  if @user && @user.remember_key_expires_at > Time.now
+		_set_user_session(user)
+		return
+	  end
+	end
+	redirect_to(login_path(:subdomain => "www"))
   end
 
-  # The logged_in? method simply returns true if the user is logged
-  # in and false otherwise. It does this by "booleanizing" the
-  # current_user method we created previously using a double ! operator.
-  # Note that this is not common in Ruby and is discouraged unless you
-  # really mean to convert something into true or false.
-  def logged_in?
-	!!current_user
-  end
 
-  # Finds the User with the ID stored in the session with the key
-  # :current_user_id This is a common way to handle user login in
-  # a Rails application; logging in sets the session value and
-  # logging out removes it.
-  def current_user
-	@_current_user ||= session[:current_user_id] &&
-	  User.find(session[:current_user_id])
+  def _clean_session_cookie
+	cookies.delete :remember_key 
+	@user.update_attribute(:remember_key, "") if @user
   end
 
 end

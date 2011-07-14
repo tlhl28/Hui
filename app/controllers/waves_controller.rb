@@ -1,16 +1,15 @@
 class WavesController < ApplicationController
 
   def new
-	@user.follower.each do |id|
-	  follower = User.find(id)
-	  wave = Waves.new(:audio => param[:audio_id])
-	  follower.waves.flow_in(wave)
-	end
-	@user.waves.flow_out(wave)
+	wave = Wave.new(param[:wave])
+	@user.publish(wave)
   end
 
   def destroy(id)
-	Waves.destroy(id)
+	Wave.destroy(id)
+  end
+
+  def share(id)
   end
 
 end

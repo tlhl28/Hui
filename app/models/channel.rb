@@ -1,5 +1,2 @@
-class Channel
-  include MongoMapper::Document
-
-
+class Channel < BaseModel
 end

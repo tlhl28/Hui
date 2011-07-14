@@ -1,5 +1,4 @@
-class User
-  include MongoMapper::Document
+class User < BaseModel
 
   key :email,  String
   key :name,  String
@@ -14,14 +13,21 @@ class User
   key :reset_password_key_expires_at, Time
 
   key :blacklist, Array
+  key :favorites, Array
   key :follwer, Array
   key :follow, Array
 
-  #created_at and updated_at
-  timestamps!
-
   # Assocations :::::::::::::::::::::::::::::::::::::::::::::::::::::
   many :waves
+
+  def publish_wave(wave)
+	self.follower.each do |id|
+	  waves = User.find(id).waves
+	  waves.save(wave)
+	end
+	wave.following = Wave::OUT
+	self.waves.save(wave)
+  end
 
   # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
   RegEmailName   = '[\w\.%\+\-]+'

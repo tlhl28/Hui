@@ -14,16 +14,39 @@ class User < BaseModel
 
   key :blacklist, Array
   key :favorites, Array
-  key :follwer, Array
-  key :follow, Array
+  key :follower_ids, Array
+  key :following_ids, Array
+  key :channel_ids, Array
+
+  attr_protected :follower_ids, :following_ids
+
+  def add_follower(user)
+	self.follower_ids | user.id
+  end
+  def remove_follower(user)
+	self.follower_ids.delete(user.id)
+  end
+
+  def add_following(user)
+	return false if user.blacklist.include? self.id
+	user.add_follower(self) 
+	self.following_ids | user.id
+  end
+  def remove_following(user)
+	user.remove_follower(self)
+	self.following_ids.delete(user.id)
+  end
 
   # Assocations :::::::::::::::::::::::::::::::::::::::::::::::::::::
-  many :waves
+  has_many :follwers, :in => :follower_ids
+  has_many :following, :in => :following_ids
+  has_many :channels, :in => :channes_ids
+  has_many :waves
 
   def publish_wave(wave)
-	self.follower.each do |id|
-	  waves = User.find(id).waves
-	  waves.save(wave)
+	list = self.followers.each do |follower|
+	  next if self.blacklist.include? follower.id
+	  follower.waves.save(wave)
 	end
 	wave.following = Wave::OUT
 	self.waves.save(wave)
@@ -79,4 +102,10 @@ class User < BaseModel
 	self.password = User.hash_password(pwd, self.salt)
   end
 
+end
+
+class follwers < User
+end
+
+class follwing < User
 end

@@ -1,2 +1,2 @@
-class Channel < BaseModel
+class Channel < User
 end

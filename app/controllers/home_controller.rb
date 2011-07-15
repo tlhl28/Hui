@@ -1,18 +1,14 @@
 class HomeController < ApplicationController
 
   def timeline
-	@flowing = []
-	@flowing << @user.waves.paginate({
+	@flowing = @user.waves.paginate({
 	  :order => :created_at.asc,
 	  :per_page => 10
 	})
-	render 'timeline'
   end
 
   def profile
-	@flowing = []
-	@flowing << @user.waves.out()
-	render 'profile'
+	@flowing = @user.waves.out()
   end
 
   def sign_up

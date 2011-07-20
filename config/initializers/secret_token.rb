@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Wave::Application.config.secret_token = '3de368ded23f3085e370823f00878558867f333fe1d6635a4d5c602bc2d1b3f9e144b355e1dc4a1c49666a8414a5f8e8986ede7319f3d877f47a1dd8578aa7b7'
+Jwave::Application.config.secret_token = 'ecafa1036e081193da2873bbd1373e17ae1ad115d5edced1c13757fe02192e74478f67d28d39a79023e13a604ba2c9407125e9ef1738c9ff2334be9d600a920b'

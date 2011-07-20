@@ -1,4 +1,4 @@
-Wave::Application.routes.draw do
+Jwave::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -12,7 +12,6 @@ Wave::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :book
 
   # Sample resource route with options:
   #   resources :products do

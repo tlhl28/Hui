@@ -1,14 +1,14 @@
 class HomeController < ApplicationController
 
   def timeline
-	@flowing = @user.waves.paginate({
-	  :order => :created_at.asc,
-	  :per_page => 10
-	})
+	@waves = @user.follows.collect { |person| 
+	  person.fresh_waves
+	}
+	@waves << @user.waves_except(Flowing::SHARE)
   end
 
   def profile
-	@flowing = @user.waves.out()
+	@waves = @user.fresh_waves
   end
 
   def sign_up

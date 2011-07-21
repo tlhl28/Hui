@@ -11,12 +11,13 @@ class User < Neo4j::Rails::Model
   property :reset_password_property
   property :reset_password_property_expires_at
 
+  property :created_at
 
-  has_n :followers
-  has_n :follow
+  has_n(:followers).from(User)
+  has_n(:follows).to(User)
   has_n :channel
 
-  has_n :waves
+  has_n(:waves).to(Wave).relationship(Flowing)
 
   # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
   RegEmailName   = '[\w\.%\+\-]+'
@@ -29,5 +30,26 @@ class User < Neo4j::Rails::Model
 
   validates_length_of :password, :within => 6..8
   validates_length_of :password, :with => RegEmailName
+
+
+  def fresh_waves(hour=1)
+	self.waves.collect { |wave| wave if wave.fresh?(hour) }
+  end
+
+  def get_waves(type)
+	rels(:waves).find { |rel| rel.end_node if rel.type == type) }
+  end
+
+  def waves_except(type)
+	rels(:waves).find { |rel| rel.end_node if rel.type != type) }
+  end
+
+  def share_waves
+	get_waves(Flowing::SHARE)
+  end
+
+  def comment_waves
+	get_waves(Flowing::COMMENT)
+  end
 
 end

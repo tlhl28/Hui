@@ -1,7 +1,7 @@
 class Wave < Neo4j::Rails::Model
-  key :video
-  key :tweet
-  key :created_at
+  property :video
+  property :tweet
+  property :created_at
   index :video
 
   has_one(:owner).from(User,:waves)
@@ -11,7 +11,7 @@ class Wave < Neo4j::Rails::Model
 
   # share entry or comment entry to others
   # the type descriped in Flowing relationship
-  has_one(:with).to(Wave,:refs).relationship(Flowing)
+  has_one(:with).to(Wave).relationship(Flowing)
 
   validates_length_of :tweet, :within => 0..50
 
@@ -20,11 +20,11 @@ class Wave < Neo4j::Rails::Model
   end
 
   def is_comment?
-	self.with_rel.type == Flowing::COMMENT
+	self.owner_rel.type == Flowing::COMMENT
   end
 
   def is_share?
-	self.with_rel[:type] == Flowing::SHARE
+	self.owner_rel[:type] == Flowing::SHARE
   end
 
   # find comments by relationship

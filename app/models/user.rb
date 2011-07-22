@@ -13,7 +13,7 @@ class User < Neo4j::Rails::Model
 
   property :created_at
 
-  has_n(:followers).from(User)
+  has_n(:followers).from(User,:follows)
   has_n(:follows).to(User)
   has_n :channel
 
@@ -25,31 +25,28 @@ class User < Neo4j::Rails::Model
   RegDomainTLD   = '(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)'
   RegEmailOk     = /\A#{RegEmailName}@#{RegDomainHead}#{RegDomainTLD}\z/i
 
+  PasswordOk = /\A#{RegEmailName}#{RegDomainHead}\z/i
+
   validates_length_of :email, :within => 6..100
   validates_format_of :email, :with => RegEmailOk
 
   validates_length_of :password, :within => 6..8
-  validates_length_of :password, :with => RegEmailName
-
+  validates_format_of :password, :with => PasswordOk
 
   def fresh_waves(hour=1)
 	self.updates.collect { |wave| wave if wave.fresh?(hour) }
   end
 
-  def waves(type)
-	rels(:updates).find { |rel| rel.end_node if rel.type == type) }
-  end
-
   def waves_except(type)
-	rels(:updaets).find { |rel| rel.end_node if rel.type != type) }
+	self.updates.find_all { |wave| wave.owner_rel.type != type }
   end
 
   def share_waves
-	waves(Flowing::SHARE)
+	self.updates.find_all { |wave| wave.is_share? }
   end
 
   def comment_waves
-	waves(Flowing::COMMENT)
+	self.updates.find_all { |wave| wave.is_comment? }
   end
 
 end

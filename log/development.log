@@ -1,0 +1,708 @@
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/chord/.rvm/rubies/jruby-1.6.3/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 15:42:50 +0800 2011
+
+ActionController::RoutingError (No route matches "/statuses/friends_timeline"):
+  
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 15:44:47 +0800 2011
+
+ActionController::RoutingError (No route matches "/statuses/friends_timeline"):
+  
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 15:45:00 +0800 2011
+  Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"friends_timeline"}
+Completed 500 Internal Server Error in 27ms
+
+ActionView::MissingTemplate (Missing template statuses/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/chord/personal/Wave/app/views"):
+  
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (3.0ms)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 15:46:35 +0800 2011
+  Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"friends_timeline"}
+Completed 500 Internal Server Error in 21ms
+
+ActionView::MissingTemplate (Missing template statuses/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/chord/personal/Wave/app/views"):
+  app/controllers/statuses_controller.rb:30:in `show'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (11.0ms)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 15:46:53 +0800 2011
+  Processing by StatusesController#show as HTML
+  Parameters: {"id"=>"friends_timeline"}
+Completed 500 Internal Server Error in 11ms
+
+ActionView::MissingTemplate (Missing template statuses/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/chord/personal/Wave/app/views"):
+  app/controllers/statuses_controller.rb:31:in `show'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (6.0ms)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 15:53:24 +0800 2011
+
+NoMethodError (undefined method `  get' for #<ActionDispatch::Routing::Mapper:0xe284ab>):
+  config/routes.rb:60:in `(root)'
+  config/routes.rb:59:in `(root)'
+  config/routes.rb:1:in `(root)'
+  config/routes.rb:235:in `load'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (85.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Fri Jul 22 15:54:37 +0800 2011
+
+ActionController::RoutingError (No route matches "/rails/info/properties"):
+  
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Fri Jul 22 15:54:41 +0800 2011
+
+ActionController::RoutingError (No route matches "/rails/info/properties"):
+  
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Fri Jul 22 15:54:41 +0800 2011
+
+ActionController::RoutingError (No route matches "/rails/info/properties"):
+  
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Fri Jul 22 15:55:12 +0800 2011
+  Processing by Rails::InfoController#properties as 
+Rendered inline template (1.0ms)
+Completed 200 OK in 66ms (Views: 5.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Fri Jul 22 15:56:08 +0800 2011
+  Processing by Rails::InfoController#properties as 
+Rendered inline template (1.0ms)
+Completed 200 OK in 7ms (Views: 3.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at Fri Jul 22 15:56:10 +0800 2011
+  Processing by Rails::InfoController#properties as 
+Rendered inline template (1.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 15:56:13 +0800 2011
+  Processing by StatusesController#friends_timeline as HTML
+Completed 500 Internal Server Error in 13ms
+
+NoMethodError (undefined method `follows' for nil:NilClass):
+  app/controllers/statuses_controller.rb:5:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 15:56:51 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `follows' for nil:NilClass):
+  app/controllers/statuses_controller.rb:5:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 15:57:46 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 11ms
+
+SyntaxError (/home/chord/personal/Wave/app/models/user.rb:40: syntax error, unexpected tRPAREN
+
+	rels(:updates).find { |rel| rel.end_node if rel.type == type) }
+                                                             ^):
+  app/models/user.rb:454:in `load_file'
+  app/controllers/statuses_controller.rb:5:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:00:22 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 11ms
+
+SyntaxError (/home/chord/personal/Wave/app/models/user.rb:40: syntax error, unexpected tRPAREN
+
+	rels(:updaets).find { |rel| rel.end_node if rel.type != type) }
+                                                             ^):
+  app/models/user.rb:491:in `load_missing_constant'
+  app/controllers/statuses_controller.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:02:04 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 27ms
+
+RuntimeError (Expected a symbol for, got User):
+  app/models/user.rb:16:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:491:in `load_missing_constant'
+  app/controllers/statuses_controller.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:02:52 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 20ms
+
+RuntimeError (Expected a symbol for, got User):
+  app/models/user.rb:16:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:491:in `load_missing_constant'
+  app/controllers/statuses_controller.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:02:52 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 23ms
+
+RuntimeError (Expected a symbol for, got User):
+  app/models/user.rb:16:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:491:in `load_missing_constant'
+  app/controllers/statuses_controller.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (95.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (126.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:04:01 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 39ms
+
+NoMethodError (undefined method `key' for Wave:Class):
+  app/models/wave.rb:2:in `Wave'
+  app/models/wave.rb:1:in `(root)'
+  app/models/wave.rb:183:in `const_missing'
+  app/models/user.rb:20:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:491:in `load_missing_constant'
+  app/controllers/statuses_controller.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:04:26 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 57ms
+
+NoMethodError (undefined method `key' for Wave:Class):
+  app/models/wave.rb:2:in `Wave'
+  app/models/wave.rb:1:in `(root)'
+  app/models/wave.rb:20:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:05:15 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 21ms
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/models/user.rb:17:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:05:44 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 74ms
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/models/wave.rb:14:in `Wave'
+  app/models/wave.rb:1:in `(root)'
+  app/models/wave.rb:20:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:05:55 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 47ms
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/models/wave.rb:14:in `Wave'
+  app/models/wave.rb:1:in `(root)'
+  app/models/wave.rb:20:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:06:04 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 51ms
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/models/wave.rb:14:in `Wave'
+  app/models/wave.rb:1:in `(root)'
+  app/models/wave.rb:20:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:06:12 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 15ms
+
+RuntimeError (Expected a symbol for, got User):
+  app/models/user.rb:16:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:06:22 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 49ms
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/models/wave.rb:14:in `Wave'
+  app/models/wave.rb:1:in `(root)'
+  app/models/wave.rb:20:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:07:53 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 79ms
+
+ArgumentError (Range unspecified. Specify the :within, :maximum, :minimum, or :is option.):
+  app/models/user.rb:32:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:08:06 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 59ms
+
+ArgumentError (Range unspecified. Specify the :within, :maximum, :minimum, or :is option.):
+  app/models/user.rb:32:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:08:32 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 75ms
+
+ArgumentError (wrong number of arguments (2 for 1)):
+  app/models/wave.rb:14:in `Wave'
+  app/models/wave.rb:1:in `(root)'
+  app/models/wave.rb:20:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:08:54 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 78ms
+
+ArgumentError (Range unspecified. Specify the :within, :maximum, :minimum, or :is option.):
+  app/models/user.rb:32:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:09:24 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 59ms
+
+ArgumentError (Range unspecified. Specify the :within, :maximum, :minimum, or :is option.):
+  app/models/user.rb:32:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:09:37 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 54ms
+
+ArgumentError (A regular expression must be supplied as the :with option of the configuration hash):
+  app/models/user.rb:32:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:09:43 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 131ms
+
+ArgumentError (A regular expression must be supplied as the :with option of the configuration hash):
+  app/models/user.rb:32:in `User'
+  app/models/user.rb:1:in `(root)'
+  app/models/user.rb:4:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:10:50 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 59ms
+
+NoMethodError (undefined method `filter' for #<Neo4j::Rails::Relationships::NodesDSL:0xf2486b>):
+  app/models/user.rb:40:in `waves_except'
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:11:20 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 80ms
+
+NoMethodError (undefined method `filter' for #<Neo4j::Rails::Relationships::NodesDSL:0x6e48d4>):
+  app/models/user.rb:42:in `waves_except'
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:12:54 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 65ms
+
+NoMethodError (undefined method `filter' for #<Neo4j::Rails::Relationships::NodesDSL:0x861253>):
+  app/models/user.rb:41:in `waves_except'
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:13:12 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 55ms
+
+NoMethodError (undefined method `filter' for #<Neo4j::Rails::Relationships::NodesDSL:0x6261c9>):
+  app/models/user.rb:41:in `waves_except'
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:22:29 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 91ms
+
+NoMethodError (undefined method `filter' for #<Neo4j::Rails::Relationships::RelsDSL:0x9ff77>):
+  app/models/user.rb:41:in `waves_except'
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:23:40 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 105ms
+
+NoMethodError (undefined method `filter' for #<Neo4j::Rails::Relationships::NodesDSL:0x2909a1>):
+  app/models/user.rb:41:in `waves_except'
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:25:19 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 147ms
+
+NativeException (java.lang.NullPointerException: null):
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:25:32 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 55ms
+
+NativeException (java.lang.NullPointerException: null):
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:25:33 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 98ms
+
+NativeException (java.lang.NullPointerException: null):
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:25:33 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 80ms
+
+NativeException (java.lang.NullPointerException: null):
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:25:43 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 63ms
+
+NativeException (java.lang.NullPointerException: null):
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:26:13 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 50ms
+
+NoMethodError (undefined method `filter' for #<Neo4j::Rails::Relationships::NodesDSL:0x6b74c8>):
+  app/models/user.rb:41:in `waves_except'
+  app/controllers/statuses_controller.rb:8:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:30:44 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 58ms
+
+NoMethodError (undefined method `created_at' for []:Array):
+  app/controllers/statuses_controller.rb:9:in `friends_timeline'
+  app/controllers/statuses_controller.rb:9:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:31:51 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 500 Internal Server Error in 66ms
+
+TypeError (Symbol as array index):
+  app/controllers/statuses_controller.rb:9:in `friends_timeline'
+  app/controllers/statuses_controller.rb:9:in `friends_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:32:16 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 200 OK in 86ms (Views: 5.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:34:53 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 200 OK in 63ms (Views: 2.0ms)
+
+
+Started GET "/statuses/friends_timeline" for 127.0.0.1 at Fri Jul 22 16:36:42 +0800 2011
+  Processing by StatusesController#friends_timeline as HTML
+Completed 406 Not Acceptable in 53ms
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:36:52 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `fresh_waves' for nil:NilClass):
+  app/controllers/statuses_controller.rb:14:in `user_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:37:09 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `fresh_waves' for nil:NilClass):
+  app/controllers/statuses_controller.rb:14:in `user_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:37:10 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `fresh_waves' for nil:NilClass):
+  app/controllers/statuses_controller.rb:14:in `user_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:37:11 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `fresh_waves' for nil:NilClass):
+  app/controllers/statuses_controller.rb:14:in `user_timeline'
+
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/chord/.rvm/gems/jruby-1.6.3/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:37:24 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 200 OK in 65ms (Views: 2.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:37:31 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 200 OK in 66ms (Views: 2.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:44:18 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 200 OK in 56ms (Views: 5.0ms)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:44:23 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 200 OK in 59ms (Views: 2.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/chord/.rvm/rubies/jruby-1.6.3/lib/ruby/1.8/webrick/httpserver.rb:104)
+
+
+Started GET "/statuses/friends_timeline.json" for 127.0.0.1 at Fri Jul 22 16:44:53 +0800 2011
+  Processing by StatusesController#friends_timeline as JSON
+Completed 200 OK in 97ms (Views: 4.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:45:13 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 200 OK in 76ms (Views: 3.0ms)
+
+
+Started GET "/statuses/user_timeline.json" for 127.0.0.1 at Fri Jul 22 16:45:28 +0800 2011
+  Processing by StatusesController#user_timeline as JSON
+Completed 200 OK in 66ms (Views: 3.0ms)

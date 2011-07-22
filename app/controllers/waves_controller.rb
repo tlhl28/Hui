@@ -12,4 +12,7 @@ class WavesController < ApplicationController
   def share(id)
   end
 
+  def comment
+  end
+
 end

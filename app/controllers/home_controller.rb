@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
 
   def timeline
-	@waves = @user.follows.collect { |person| 
-	  person.fresh_waves
-	}
-	@waves << @user.waves_except(Flowing::SHARE)
+	@waves = @user.follows.collect do |follow| 
+	  follow.fresh_waves
+	end.sort_by { |wave| wave.created_at }
+	@waves << @user.waves_except(Flowing::SHARE).sort
   end
 
   def profile

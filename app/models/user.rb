@@ -17,7 +17,7 @@ class User < Neo4j::Rails::Model
   has_n(:follows).to(User)
   has_n :channel
 
-  has_n(:waves).to(Wave).relationship(Flowing)
+  has_n(:updates).to(Wave).relationship(Flowing)
 
   # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
   RegEmailName   = '[\w\.%\+\-]+'
@@ -33,23 +33,23 @@ class User < Neo4j::Rails::Model
 
 
   def fresh_waves(hour=1)
-	self.waves.collect { |wave| wave if wave.fresh?(hour) }
+	self.updates.collect { |wave| wave if wave.fresh?(hour) }
   end
 
-  def get_waves(type)
-	rels(:waves).find { |rel| rel.end_node if rel.type == type) }
+  def waves(type)
+	rels(:updates).find { |rel| rel.end_node if rel.type == type) }
   end
 
   def waves_except(type)
-	rels(:waves).find { |rel| rel.end_node if rel.type != type) }
+	rels(:updaets).find { |rel| rel.end_node if rel.type != type) }
   end
 
   def share_waves
-	get_waves(Flowing::SHARE)
+	waves(Flowing::SHARE)
   end
 
   def comment_waves
-	get_waves(Flowing::COMMENT)
+	waves(Flowing::COMMENT)
   end
 
 end

@@ -1,18 +1,20 @@
 class StatusesController < ApiController
 
   def friends_timeline
-	@user = User.new
+	@user = User.find(4)
 	waves = @user.follows.collect do |follow| 
-	  follow.fresh_waves
+	  follow.fresh_waves.to_a
 	end
-	waves += @user.waves_except(Flowing::SHARE).sort
+	waves += @user.waves_except(Flowing::SHARE).to_a.sort
+	waves.flatten!
 	waves.sort_by { |wave| wave.created_at }
 	to_api(waves)
   end
 
   def user_timeline
-	@user = User.new
-	waves = @user.fresh_waves
+	#@user = User.find_by_name("me")
+	@user = User.find 4
+	waves = @user.fresh_waves.to_a
 	to_api(waves)
   end
 

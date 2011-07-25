@@ -16,7 +16,7 @@ class Wave < Neo4j::Rails::Model
   validates_length_of :tweet, :within => 0..50
 
   def fresh?(hour=1)
-	self.created_at > hour.hours.from_now
+	self.created_at < hour.hours.from_now
   end
 
   def is_comment?

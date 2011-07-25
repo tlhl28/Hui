@@ -13,6 +13,8 @@ class User < Neo4j::Rails::Model
 
   property :created_at
 
+  index :name
+
   has_n(:followers).from(User,:follows)
   has_n(:follows).to(User)
   has_n :channel
@@ -31,7 +33,7 @@ class User < Neo4j::Rails::Model
   validates_format_of :email, :with => RegEmailOk
 
   validates_length_of :password, :within => 6..8
-  validates_format_of :password, :with => PasswordOk
+  #validates_format_of :password, :with => PasswordOk
 
   def fresh_waves(hour=1)
 	self.updates.collect { |wave| wave if wave.fresh?(hour) }

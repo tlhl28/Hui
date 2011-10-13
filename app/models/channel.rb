@@ -1,2 +1,0 @@
-class Channel < User
-end

@@ -1,8 +1,2 @@
-This is a secret Project Running on JRbuy and Rails !!!
-
-Because of Neo4j database, I have to use jruby to run Rails...for now.
-neo4j support REST, so we can access it by any lanague support REST. 
-But there are no lib support Rails now.
-
-TODO:
-A LOT!!!
+personal sound and picture record.
+It's a audio blog. Words? tweet them

@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Jwave::Application.load_tasks
+Hui::Application.load_tasks

@@ -1,2 +1,0 @@
-module WavesHelper
-end

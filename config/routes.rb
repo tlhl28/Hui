@@ -1,4 +1,4 @@
-Jwave::Application.routes.draw do
+Hui::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -12,7 +12,6 @@ Jwave::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  #resources :statuses
 
   # Sample resource route with options:
   #   resources :products do
@@ -25,12 +24,6 @@ Jwave::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-  resources :statuses do
-	collection do
-	  get 'friends_timeline'
-	  get 'user_timeline'
-	end
-  end
 
   # Sample resource route with sub-resources:
   #   resources :products do

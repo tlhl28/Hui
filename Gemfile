@@ -5,13 +5,7 @@ gem 'rails', '3.0.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'neo4j', '1.1.0'
-
-group :development do
-  gem 'rspec-rails'
-end
-
-
+gem 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -26,13 +20,7 @@ end
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
-# gem 'neo4j', '1.1.0'
-
-group :development do
-  gem 'rspec-rails'
-end
-
-
+# gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 # Bundle gems for the local environment. Make sure to
